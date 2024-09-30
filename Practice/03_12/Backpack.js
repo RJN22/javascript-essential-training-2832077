@@ -5,7 +5,7 @@
  * Class expression:  const Name = class {}
  */
 
-class Backpack {
+export class Backpack {
   constructor(
     // Defines parameters:
     name,
@@ -37,4 +37,18 @@ class Backpack {
   }
 }
 
-export default Backpack;
+export class WorkoutBag extends Backpack {
+  constructor(
+    name,
+    volume,
+    color,
+    pocketNum,
+    strapLengthL,
+    strapLengthR,
+    lidOpen,
+    shoesIn
+  ) {
+    super(name, volume, color, pocketNum, strapLengthL, strapLengthR, lidOpen);
+    this.shoesIn = shoesIn;
+  }
+}
